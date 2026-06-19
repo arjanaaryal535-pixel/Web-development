@@ -1,47 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My First Webpage</title>
+  <link rel="stylesheet" href="css/style.css">
 
-    <link rel="stylesheet" href="css/index.css">
+  <!-- Internal CSS - styles just the footer -->
+  <style>
+    .page-footer {
+      text-align: center;
+      color: #777777;
+      font-size: 14px;
+      padding: 20px;
+    }
+  </style>
 </head>
 <body>
 
-    <h1>Welcome to My First Webpage</h1>
+  <!-- Fixed Navbar -->
+  <nav class="fixed-navbar">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="feedback.html">Feedback</a>
+  </nav>
 
-    <p>
-        Hello! My name is Arjana. I am a computer science student who enjoys
-        learning programming and web development.
-    </p>
+  <div class="page-content-offset">
+    <div class="page-wrapper">
 
-    <h2>My Hobbies</h2>
+      <h1 id="main-heading">Welcome to My First Webpage</h1>
 
-    <ol>
-        <li>Reading books</li>
-        <li>Listening to music</li>
-        <li>Learning coding</li>
-    </ol>
+      <!-- Main content - relative position, reference for the absolute badge -->
+      <div class="main-content">
 
-    <h2>My Favorite Foods</h2>
+        <span class="important-badge">Important</span>
 
-    <ul>
-        <li>Momo</li>
-        <li>Pizza</li>
-        <li>Pasta</li>
-    </ul>
+        <p class="intro-text">
+          Hey, I'm <strong>Arjana Aryal</strong>. I'm still pretty new to web development,
+          but I've been having a lot of fun figuring out how <em>HTML, CSS, and JavaScript</em>
+          actually fit together. This page is part of an assignment I'm working on, and
+          honestly it's been a good way to learn by just <u>messing around and seeing what breaks</u>.
+        </p>
 
-    <p>
-        I am <strong>very interested</strong> in technology and
-        <em>web development</em>.
-    </p>
+        <div class="content-div">
+          <p>
+            What I like most about coding so far is that
+            <span class="highlight-span">you learn something new with literally every small project</span>,
+            even the simple ones like this.
+          </p>
+        </div>
 
-    <p>
-        <u>Thank you for visiting my webpage!</u>
-    </p>
+        <div class="box-model-div">
+          BOX
+        </div>
 
-    <a href="about.html">Go to About Page</a>
+        <h3>Things I Like Doing When I'm Not Coding</h3>
+        <ol>
+          <li>Reading books</li>
+          <li>Playing badminton</li>
+          <li>Photography</li>
+        </ol>
+
+        <h3>Food I Like</h3>
+        <ul>
+          <li>Momo</li>
+          <li>Pizza</li>
+        </ul>
+
+        <!-- Inline CSS - one element only -->
+        <p style="color: #006400; font-weight: bold;">
+        
+        </p>
+
+        <p>
+          If you want to know a bit more about me,
+          <a href="about.html">here's my About page</a>.
+        </p>
+      </div>
+
+      <!-- Sticky heading -->
+      <h2 class="sticky-heading">A Bit More About My Hobbies</h2>
+
+      <div class="scroll-section highlight-section">
+        <h3>Reading</h3>
+        <p>
+          I mostly read fiction .
+        </p>
+      </div>
+
+      <div class="scroll-section">
+        <h3>Badminton</h3>
+        <p>
+          A few friends and I play almost every weekend. It's less about being competitive
+          and more about getting out of the house and moving around for once.
+        </p>
+      </div>
+
+      <div class="scroll-section">
+        <h3>Photography</h3>
+        <p>
+          I like taking pictures of random everyday things streets, plants, whatever
+          catches my eye. It's made me notice details I'd normally just walk past.
+        </p>
+      </div>
+
+      <div class="scroll-section">
+        <h3>Why I Got Into Web Development</h3>
+        <p>
+          Building real pages, even small ones like this, made everything click a lot faster.
+        </p>
+      </div>
+
+      <div class="scroll-section">
+        <h3>What I'm Learning Next</h3>
+        <p>
+          Right now I'm trying to get more comfortable with Javascript.
+        </p>
+      </div>
+
+    </div>
+
+    <footer class="page-footer">
+      &copy; 2026 My First Webpage. All rights reserved.
+    </footer>
+  </div>
 
 </body>
 </html>

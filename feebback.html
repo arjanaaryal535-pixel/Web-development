@@ -1,97 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feedback Form</title>
-
-    <link rel="stylesheet" href="css/index.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback Form</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <h1>Feedback Form</h1>
+  <nav class="fixed-navbar">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="feedback.html">Feedback</a>
+  </nav>
 
-    <form>
+  <div class="page-content-offset">
+    <div class="page-wrapper">
 
-        <label for="fullname">Full Name:</label><br>
+      <h2 id="main-heading">Feedback Form</h2>
 
-        <input
-            type="text"
-            id="fullname"
-            name="fullname"
-            placeholder="Enter your full name"
-            minlength="3"
-            required>
+      <form class="feedback-form" action="#" method="post">
 
-        <br><br>
+        <label for="fullName">Full Name</label>
+        <input type="text" id="fullName" name="fullName"
+               placeholder="Enter your full name" required minlength="2" maxlength="50">
 
-        <label for="email">Email Address:</label><br>
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="arjanaaryal535@gmail.com" required>
 
-        <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="Enter your email"
-            required>
+        <p><strong>Rating</strong></p>
+        <p>
+          <input type="radio" name="rating" id="veryStatisfied" value="Very Satisfied" required>
+          <label for="veryStatisfied" style="display:inline;">Very Satisfied</label><br>
 
-        <br><br>
+          <input type="radio" name="rating" id="satisfied" value="Satisfied">
+          <label for="satisfied" style="display:inline;">Satisfied</label><br>
 
-        <h3>Rating</h3>
+          <input type="radio" name="rating" id="neutral" value="Neutral">
+          <label for="neutral" style="display:inline;">Neutral</label><br>
 
-        <input type="radio" id="verysatisfied" name="rating" required>
-        <label for="verysatisfied">Very Satisfied</label><br>
+          <input type="radio" name="rating" id="unsatisfied" value="Unsatisfied">
+          <label for="unsatisfied" style="display:inline;">Unsatisfied</label>
+        </p>
 
-        <input type="radio" id="satisfied" name="rating">
-        <label for="satisfied">Satisfied</label><br>
+        <p><strong>Interests</strong></p>
+        <p>
+          <input type="checkbox" name="interests" id="webDev" value="Web Development">
+          <label for="webDev" style="display:inline;">Web Development</label><br>
 
-        <input type="radio" id="neutral" name="rating">
-        <label for="neutral">Neutral</label><br>
+          <input type="checkbox" name="interests" id="mobileDev" value="Mobile Development">
+          <label for="mobileDev" style="display:inline;">Mobile Development</label><br>
 
-        <input type="radio" id="unsatisfied" name="rating">
-        <label for="unsatisfied">Unsatisfied</label>
+          <input type="checkbox" name="interests" id="aiMl" value="AI & Machine Learning">
+          <label for="aiMl" style="display:inline;">AI &amp; Machine Learning</label>
+        </p>
 
-        <br><br>
-
-        <h3>Interests</h3>
-
-        <input type="checkbox" id="webdev" name="interest">
-        <label for="webdev">Web Development</label><br>
-
-        <input type="checkbox" id="mobiledev" name="interest">
-        <label for="mobiledev">Mobile Development</label><br>
-
-        <input type="checkbox" id="ai" name="interest">
-        <label for="ai">AI & Machine Learning</label>
-
-        <br><br>
-
-        <label for="country">Select Country:</label><br>
-
+        <label for="country">Country</label>
         <select id="country" name="country" required>
-            <option value="">--Select Country--</option>
-            <option value="nepal">Nepal</option>
-            <option value="india">India</option>
-            <option value="usa">USA</option>
+          <option value="" disabled selected>Select your country</option>
+          <option value="Nepal">Nepal</option>
+          <option value="India">India</option>
+          <option value="United States">United States</option>
+          <option value="United Kingdom">United Kingdom</option>
+          <option value="Australia">Australia</option>
         </select>
 
-        <br><br>
-
-        <label for="feedback">Write your feedback here:</label><br>
-
-        <textarea
-            id="feedback"
-            name="feedback"
-            rows="5"
-            cols="40"
-            maxlength="300"
-            placeholder="Write your feedback here..."
-            required></textarea>
-
-        <br><br>
+        <label for="feedbackMessage">Write your feedback here</label>
+        <textarea id="feedbackMessage" name="feedbackMessage" rows="5"
+                  placeholder="Type your feedback here..." minlength="10" maxlength="500" required></textarea>
 
         <button type="submit">Submit</button>
 
-    </form>
+      </form>
+
+    </div>
+  </div>
 
 </body>
 </html>
