@@ -190,3 +190,22 @@ a {
 .feedback-form button:hover {
   background-color: #143d70;
 }
+
+
+.photos-flex img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 6px;
+  display: block;
+  margin: 0 auto;
+}
+
+.photos-grid img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 6px;
+  display: block;
+  margin: 0 auto;
+}
